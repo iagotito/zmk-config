@@ -16,6 +16,33 @@
 #define ADJUST 3
 
 / {
+    macros {
+        tmux_n_s: tmux_next_session {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp SPACE>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp RPAR>
+                ;
+        };
+
+        tmux_p_s: tmux_prev_session {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp SPACE>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp LPAR>
+                ;
+        };
+    };
 
    // Activate ADJUST layer by pressing raise and lower
     conditional_layers {
@@ -45,7 +72,7 @@
                  &kp LGUI &kp LALT &kp LSHIFT &kp RET   &mo LOWER  &mo RAISE  &kp SPACE  &kp RSHIFT &kp RCTRL  &kp RALT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
@@ -80,7 +107,7 @@
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                  &trans    &trans    &trans   &trans    &trans  &trans
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                        &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
 &trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                      &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans        &trans  &trans  &trans    &trans    &trans   &trans    &trans  &trans
+&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans        &trans  &trans  &tmux_p_s &trans    &trans   &tmux_n_s &trans  &trans
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
             >;
 
