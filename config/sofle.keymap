@@ -149,11 +149,11 @@
 
         game {
             bindings = <
-&to 0   &trans  &trans  &trans  &trans  &trans                       &trans     &trans          &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                       &kp I      &kp Q           &kp W         &kp E   &kp R   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                       &kp J      &kp A           &kp S         &kp D   &kp F   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &kp K      &kp Z           &kp X         &kp C   &kp V   &kp M
-                &trans  &trans  &trans  &trans  &trans    &kp LCTRL  &kp SPACE  &kp LEFT_SHIFT  &kp LEFT_ALT  &trans
+&to 0   &trans  &trans  &trans  &trans  &trans                       &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &kp I         &kp Q           &kp W         &kp E         &kp R         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &kp J         &kp A           &kp S         &kp D         &kp F         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &kp K         &kp Z           &kp X         &kp C         &kp V         &kp M
+                &trans  &trans  &trans  &trans  &trans    &kp LCTRL  &kp SPACE     &kp LEFT_SHIFT  &kp LEFT_ALT  &trans
             >;
         };
     };
