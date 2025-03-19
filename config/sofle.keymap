@@ -63,16 +63,37 @@
     };
 
     behaviors {
-        hrm: homerow_mods {
+        lhrm: left_home_row_mod {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "LEFT_HOME_ROW_MOD";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
             quick-tap-ms = <200>;
             flavor = "hold-preferred";
-            require-prior-idle-ms = <100>;
+            hold-trigger-key-positions = <31 32 33>;
+        };
+
+        rhrm: right_home_row_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_HOME_ROW_MOD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            flavor = "hold-preferred";
+            hold-trigger-key-positions = <28 27 26>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        combo_caps_lock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <28 31>;
         };
     };
 
@@ -90,11 +111,11 @@
             //               | GUI | ALT  | SHIFT| ENTER|  LOWER |  | RAISE | SPACE| SHIFT | CTRL  | ALT  |
 
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3    &kp N4             &kp N5                            &kp N6     &kp N7              &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp ESC    &kp Q   &kp W   &kp E     &kp R              &kp T                             &kp Y      &kp U               &kp I      &kp O     &kp P     &kp BSPC
-&kp TAB    &kp A   &kp S   &kp D     &hrm LEFT_SHIFT F  &kp G                             &kp H      &hrm RIGHT_SHIFT J  &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z   &kp X   &kp C     &kp V              &kp B    &kp C_MUTE    &none      &kp N      &kp M               &kp COMMA  &kp DOT   &kp FSLH  &kp RGUI
-                   &none   &kp LALT  &kp LSHIFT         &kp RET  &mo LOWER     &mo RAISE  &kp SPACE  &kp RSHIFT          &kp RCTRL  &kp RALT
+&kp GRAVE  &kp N1  &kp N2        &kp N3         &kp N4              &kp N5                            &kp N6     &kp N7               &kp N8         &kp N9        &kp N0    &kp MINUS
+&kp ESC    &kp Q   &kp W         &kp E          &kp R               &kp T                             &kp Y      &kp U                &kp I          &kp O         &kp P     &kp BSPC
+&kp TAB    &kp A   &lhrm LALT S  &lhrm LCTRL D  &lhrm LEFT_SHIFT F  &kp G                             &kp H      &rhrm RIGHT_SHIFT J  &rhrm RCTRL K  &rhrm RALT L  &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z   &kp X         &kp C          &kp V               &kp B    &kp C_MUTE    &none      &kp N      &kp M                &kp COMMA      &kp DOT       &kp FSLH  &kp RGUI
+                   &none         &kp LALT       &kp LSHIFT          &kp RET  &mo LOWER     &mo RAISE  &kp SPACE  &kp RSHIFT           &kp RCTRL      &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
