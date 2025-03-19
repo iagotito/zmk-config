@@ -118,7 +118,16 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        combo_tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <35 34>;
+            require-prior-idle-ms = <50>;
+            layers = <0>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
