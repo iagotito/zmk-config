@@ -114,6 +114,18 @@
             require-prior-idle-ms = <75>;
             hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29 37 38 39 40 41 52 53 54 0>;
         };
+
+        lkm: layer-key-mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER-KEY-MOD";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            require-prior-idle-ms = <50>;
+            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29 37 38 39 40 41 18 19 20 21 22 30 31 32 33 34 44 45 46 47 48 57>;
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     combos {
@@ -174,11 +186,11 @@
             //               | GUI | ALT  | SHIFT| ENTER|  LOWER |  | RAISE | SPACE| SHIFT | CTRL  | ALT  |
 
             bindings = <
-&none    &kp N1  &kp N2        &kp N3         &kp N4              &kp N5                                    &kp N6       &kp N7               &kp N8         &kp N9            &kp N0    &none
-&kp ESC  &kp Q   &kp W         &kp E          &kp R               &kp T                                     &kp Y        &kp U                &kp I          &kp O             &kp P     &kp BACKSPACE
-&kp TAB  &kp A   &lhrm LALT S  &lhrm LCTRL D  &lhrs LEFT_SHIFT F  &kp G                                     &kp H        &rhrs RIGHT_SHIFT J  &rhrm RCTRL K  &rhrm LEFT_ALT L  &kp APOS  &none
-&none    &kp Z   &kp X         &kp C          &kp V               &kp B      &kp C_MUTE    &none            &kp N        &kp M                &kp COMMA      &kp DOT           &kp FSLH  &kp RGUI
-                 &none         &none          &lt 1 TAB           &kp ENTER  &lt 2 ESC     &lt 2 BACKSPACE  &lt 1 SPACE  &kp BACKSPACE        &none          &none
+&none    &kp N1  &kp N2        &kp N3         &kp N4              &kp N5                                     &kp N6       &kp N7               &kp N8         &kp N9            &kp N0    &none
+&kp ESC  &kp Q   &kp W         &kp E          &kp R               &kp T                                      &kp Y        &kp U                &kp I          &kp O             &kp P     &kp BACKSPACE
+&kp TAB  &kp A   &lhrm LALT S  &lhrm LCTRL D  &lhrs LEFT_SHIFT F  &kp G                                      &kp H        &rhrs RIGHT_SHIFT J  &rhrm RCTRL K  &rhrm LEFT_ALT L  &kp APOS  &none
+&none    &kp Z   &kp X         &kp C          &kp V               &kp B      &kp C_MUTE    &none             &kp N        &kp M                &kp COMMA      &kp DOT           &kp FSLH  &kp LGUI
+                 &none         &none          &lt 1 TAB           &kp ENTER  &lt 2 ESC     &lkm 2 BACKSPACE  &lt 1 SPACE  &kp BACKSPACE        &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
