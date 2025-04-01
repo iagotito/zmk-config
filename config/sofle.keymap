@@ -54,6 +54,13 @@
             bindings = <&kp I &kp A &kp G &kp O &kp T &kp I &kp T &kp O &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "EMAIL";
         };
+
+        import_pdb: macro_import_pdb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp M &kp P &kp O &kp R &kp T &kp SPACE &kp P &kp D &kp B &kp SEMI &kp SPACE &kp P &kp D &kp B &kp DOT &kp S &kp E &kp T &kp UNDER &kp T &kp R &kp A &kp C &kp E &kp LPAR &kp RPAR &kp ESCAPE &kp COLON &kp N &kp O &kp A &kp SPACE &kp W>;
+            label = "MACRO_IMPORT_PDB";
+        };
     };
 
     // Activate ADJUST layer by pressing raise and lower
@@ -229,10 +236,10 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &trans     &trans     &email    &trans     &trans   &to 3
-&trans      &kp F1        &kp F2        &kp F3        &kp F4        &caps_word                                &kp PG_UP  &kp HOME   &kp UP    &kp END    &kp N0   &trans
-&trans      &kp F5        &kp F6        &kp F7        &kp F8        &kp CLCK                                  &kp PG_DN  &kp LEFT   &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-&trans      &kp F9        &kp F10       &kp F11       &kp F12       &kp PSCRN     &kp C_PLAY_PAUSE    &trans  &tmux_p_s  &tmux_n_s  &trans    &trans     &trans   &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &trans     &trans     &email    &import_pdb  &trans   &to 3
+&trans      &kp F1        &kp F2        &kp F3        &kp F4        &caps_word                                &kp PG_UP  &kp HOME   &kp UP    &kp END      &kp N0   &trans
+&trans      &kp F5        &kp F6        &kp F7        &kp F8        &kp CLCK                                  &kp PG_DN  &kp LEFT   &kp DOWN  &kp RIGHT    &kp DEL  &kp BSPC
+&trans      &kp F9        &kp F10       &kp F11       &kp F12       &kp PSCRN     &kp C_PLAY_PAUSE    &trans  &tmux_p_s  &tmux_n_s  &trans    &trans       &trans   &trans
                           &trans        &trans        &trans        &trans        &trans              &trans  &trans     &trans     &trans    &trans
             >;
 
