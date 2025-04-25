@@ -261,9 +261,9 @@
         gbc {
             bindings = <
 &to 0   &trans  &trans  &trans  &trans  &trans                    &trans     &trans     &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &kp RSHFT  &kp UP    &kp RET    &trans  &trans
-&trans  &trans  &kp Z   &kp X   &trans  &trans                    &trans     &kp LEFT   &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &kp A   &kp S   &trans  &trans  &trans    &trans  &trans     &trans     &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &kp F   &trans                    &trans     &kp RSHFT  &kp UP    &kp RET    &trans  &trans
+&trans  &trans  &trans  &kp Z   &kp X   &trans                    &trans     &kp LEFT   &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &kp A   &kp S   &trans  &trans    &trans  &trans     &trans     &trans    &trans     &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &kp SPACE  &trans     &trans    &trans
             >;
         };
