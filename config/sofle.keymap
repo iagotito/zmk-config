@@ -280,11 +280,11 @@
 
         lol {
             bindings = <
-&to 0   &trans  &trans  &trans  &trans  &trans                       &kp F1     &kp F2    &kp F3     &kp F4  &kp F5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                       &kp Y      &kp N1    &kp N2     &kp N3  &kp N4  &kp P
-&trans  &trans  &trans  &trans  &trans  &trans                       &kp H      &kp Q     &kp W      &kp E   &kp R   &kp TAB
-&trans  &trans  &trans  &trans  &trans  &trans  &to 0     &trans     &trans     &kp A     &kp S      &kp D   &kp F   &kp C
-                &trans  &trans  &trans  &trans  &trans    &kp LCTRL  &kp LSHFT  &kp LALT  &kp SPACE  &trans
+&to 0   &trans  &trans  &trans  &trans  &trans                       &kp F1     &kp F2     &kp F3    &kp F4     &kp F5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &kp Y      &kp N1     &kp N2    &kp N3     &kp N4  &kp P
+&trans  &trans  &trans  &trans  &trans  &trans                       &kp H      &kp Q      &kp W     &kp E      &kp R   &kp T
+&trans  &trans  &trans  &trans  &trans  &trans  &to 0     &trans     &kp TAB    &kp A      &kp S     &kp D      &kp F   &kp C
+                &trans  &trans  &trans  &trans  &trans    &kp RCTRL  &kp SPACE  &kp LSHFT  &kp LALT  &kp RSHFT
             >;
         };
 
