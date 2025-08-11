@@ -205,7 +205,7 @@
             bindings = <
 &none    &kp N1        &kp N2        &kp N3         &kp N4              &kp N5                                       &kp N6       &kp N7               &kp N8         &kp N9            &kp N0           &none
 &kp ESC  &kp Q         &kp W         &kp E          &kp R               &kp T                                        &kp Y        &kp U                &kp I          &kp O             &kp P            &kp BACKSPACE
-&kp TAB  &lhrm LCMD A  &lhrm LALT S  &lhrm LCTRL D  &lhrs LEFT_SHIFT F  &kp G                                        &kp H        &rhrs RIGHT_SHIFT J  &rhrm RCTRL K  &rhrm LEFT_ALT L  &rhrm RCMD APOS  &none
+&kp TAB  &lhrm LCMD A  &lhrm LALT S  &lhrm LCTRL D  &lhrs LEFT_SHIFT F  &kp G                                        &kp H        &rhrs RIGHT_SHIFT J  &rhrm RCTRL K  &rhrm LEFT_ALT L  &rhrm RCMD APOS  &kp MINUS
 &none    &kp Z         &kp X         &kp C          &kp V               &kp B        &kp C_MUTE    &none             &kp N        &kp M                &kp COMMA      &kp DOT           &kp FSLH         &kp LGUI
                        &none         &none          &kp TAB             &lt 1 ENTER  &lt 2 ESC     &lkm 2 BACKSPACE  &lt 1 SPACE  &kp BACKSPACE        &none          &none
             >;
