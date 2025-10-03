@@ -187,6 +187,11 @@
             bindings = <&kp MINUS>;
             key-positions = <16 19>;
         };
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <38 39>;
+        };
     };
 
     keymap {
@@ -210,7 +215,9 @@
                        &none         &none          &kp TAB             &lt 1 ENTER  &lt 2 ESC     &lkm 2 BACKSPACE  &lt 1 SPACE  &kp BACKSPACE        &none          &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         num_layer {
