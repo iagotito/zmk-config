@@ -64,7 +64,7 @@
         phone: phone {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PLUS &kp N5 &kp N5 &kp N8 &kp N3 &kp N9 &kp N9 &kp N8 &kp N8 &kp N0 &kp N0 &kp N2 &kp N2 &kp N2>;
+            bindings = <&kp N8 &kp N3 &kp N9 &kp N9 &kp N8 &kp N8 &kp N0 &kp N0 &kp N2 &kp N2 &kp N2>;
             label = "PHONE";
         };
 
