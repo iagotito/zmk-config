@@ -19,15 +19,15 @@
 #
 ---
 include:
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: sofle_left
     artifact-name: sofle_left
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: sofle_right
     artifact-name: sofle_right
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: klotz_left
     artifact-name: klotz_left
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: klotz_right
     artifact-name: klotz_right
