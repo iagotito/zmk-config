@@ -1,6 +1,6 @@
 # ZMK config
 
-My SofleV2 and Klotz keyboards configuration based on
+My Sofle v2 keyboard configuration based on
 [https://zmk.dev/docs](https://zmk.dev/docs).
 
 Using [nickcoutsos's keyboard

@@ -26,11 +26,5 @@ include:
     shield: sofle_right
     artifact-name: sofle_right
   - board: nice_nano//zmk
-    shield: klotz_left
-    artifact-name: klotz_left
-  - board: nice_nano//zmk
-    shield: klotz_right
-    artifact-name: klotz_right
-  - board: nice_nano//zmk
     shield: settings_reset
     artifact-name: settings_reset
